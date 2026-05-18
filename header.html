@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' id='fontSource-css'
+        href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro%3Awght%40400%3B600%3B700&#038;display=swap&#038;ver=1'
+        type='text/css' media='all' />
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <title>Header Cocina Vital</title>
+</head>
+
+<body>
+    <header class="CVnavbar navbar navbar-expand-lg">
+        <div class="container-fluid px-4 flex-nowrap">
+            <a class="navbar-brand" href="#" aria-label="Cocina Vital">
+                <div class="CVnavbar-logo d-flex align-items-center">
+                    <img src="./images/iconos-header/cocina-vital-logo-200.webp" srcset="
+                            ./images/iconos-header/cocina-vital-logo-150.webp 50w,
+                            ./images/iconos-header/cocina-vital-logo-200.webp 100w,
+                            ./images/iconos-header/cocina-vital-logo-400.webp 400w
+                        " sizes="(max-width: 991.98px) 150px, 200px" alt="Cocina Vital" width="200" height="20"
+                        class="CVnavbar-logo__img img-fluid">
+                </div>
+            </a>
+            <nav class="d-none d-lg-flex flex-grow-1 justify-content-center gap-5"
+                aria-label="Menú de navegación principal">
+                <a href="#" class="CVnavbar-nav__link">
+                    <img src="./images/iconos-header/icono-recetas.webp" alt="Icono recetas"> Recetas nuevas</a>
+                <a href="#" class="CVnavbar-nav__link">
+                    <img src="./images/iconos-header/icono-tips.webp" alt="Icono tips"> Tips de cocina</a>
+                <a href="#" class="CVnavbar-nav__link">
+                    <img src="./images/iconos-header/icono-recetarios.webp" alt="Icono recetarios"> Recetarios</a>
+                <a href="#" class="CVnavbar-nav__link">
+                    <img src="./images/iconos-header/icono-videos.webp" alt="Icono videorecetas"> Videorecetas</a>
+            </nav>
+            <div class="d-flex align-items-center gap-md-5 gap-sm-3">
+                <button class="CVbtn-search-trigger" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#CVsearchOffcanvas" aria-controls="CVsearchOffcanvas" aria-label="Abrir buscador">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-search search-icon" viewBox="0 0 16 16" aria-hidden="true">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </button>
+                <button class="CVbtn-menu-circle" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Buscador -->
+    <div class="CVsearch-canvas offcanvas offcanvas-top offcanvas-fullscreen" tabindex="-1" id="CVsearchOffcanvas"
+        aria-labelledby="CVsearchLabel">
+        <div class="CVsearch-header px-3 px-lg-4 py-3">
+            <span class="CVsearch-header__label" id="CVsearchLabel"></span>
+            <button type="button" class="CVsearch-close" data-bs-dismiss="offcanvas" aria-label="Cerrar buscador">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16" aria-hidden="true">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="offcanvas-body CVsearch-body">
+            <form class="CVsearch-form" role="search" autocomplete="on">
+                <label class="visually-hidden" for="CVsearchInput">Buscar recetas o contenido</label>
+                <input id="CVsearchInput" class="CVsearch-input" type="search" name="q" list="CVsearchSuggestions"
+                    placeholder="¿Qué cocinar hoy?" autocomplete="on" spellcheck="false">
+                <p class="CVsearch-help">Escribe lo que estas buscando y pulsa enter</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Menú despegable -->
+    <div class="CVnavbar-canvas offcanvas offcanvas-top offcanvas-fullscreen" tabindex="-1" id="megaMenuOffcanvas"
+        aria-labelledby="megaMenuLabel">
+
+        <div class="offcanvas-header px-4 py-3">
+            <a class="navbar-brand" href="#" aria-label="Cocina Vital">
+                <div class="CVnavbar-logo d-flex align-items-center">
+                    <img src="./images/iconos-header/cocina-vital-logo-200.webp" srcset="
+                            ./images/iconos-header/cocina-vital-logo-150.webp 150w,
+                            ./images/iconos-header/cocina-vital-logo-200.webp 200w,
+                            ./images/iconos-header/cocina-vital-logo-400.webp 400w
+                        " sizes="(max-width: 991.98px) 150px, 200px" alt="Cocina Vital" width="200" height="20"
+                        class="CVnavbar-logo__img img-fluid">
+                </div>
+            </a>
+            <nav class="d-none d-lg-flex flex-grow-1 justify-content-center gap-5"
+                aria-label="Menú de navegación principal">
+                <a href="#" class="CVnavbar-nav__link">
+                    <img src="./images/iconos-header/icono-recetas.webp" alt="Icono recetas"> Recetas nuevas</a>
+                <a href="#" class="CVnavbar-nav__link">
+                    <img src="./images/iconos-header/icono-tips.webp" alt="Icono tips"> Tips de cocina</a>
+                <a href="#" class="CVnavbar-nav__link">
+                    <img src="./images/iconos-header/icono-recetarios.webp" alt="Icono recetarios"> Recetarios</a>
+                <a href="#" class="CVnavbar-nav__link">
+                    <img src="./images/iconos-header/icono-videos.webp" alt="Icono videorecetas"> Videorecetas</a>
+            </nav>
+
+            <button type="button" class="btn-close CVnavbar-cerrar" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="offcanvas-body p-0 d-flex flex-column">
+            <div class="container-fluid flex-grow-1">
+                <nav class="nav-menu__mobile d-block d-lg-none">
+                    <div class="row text-center py-4">
+                        <div class="col-6 mb-3 text-start"><a href="#" class="CVnavbar-nav__link"><img
+                                    src="./images/iconos-header/icono-recetas.webp" alt="Icono recetas"> Recetas
+                                nuevas</a></div>
+                        <div class="col-6 mb-3 text-start"><a href="#" class="CVnavbar-nav__link"><img
+                                    src="./images/iconos-header/icono-tips.webp" alt="Icono tips"> Tips de cocina</a>
+                        </div>
+                        <div class="col-6 text-start"><a href="#" class="CVnavbar-nav__link"><img
+                                    src="./images/iconos-header/icono-recetarios.webp" alt="Icono recetarios">
+                                Recetarios</a></div>
+                        <div class="col-6 text-start"><a href="#" class="CVnavbar-nav__link"><img
+                                    src="./images/iconos-header/icono-videos.webp" alt="Icono videorecetas">
+                                Videorecetas</a></div>
+                    </div>
+                </nav>
+
+                <div class="d-none d-lg-block text-center">
+                    <div class="row text-center">
+                        <div class="col menu-section">
+                            <span class="mega-menu-title">Por momento del día</span>
+                            <ul class="mega-menu-list">
+                                <li><a href="#">Desayunos</a></li>
+                                <li><a href="#">Comidas</a></li>
+                                <li><a href="#">Cenas</a></li>
+                            </ul>
+                        </div>
+                        <div class="col menu-section">
+                            <span class="mega-menu-title">Por ingrediente</span>
+                            <ul class="mega-menu-list">
+                                <li><a href="#">Pollo</a></li>
+                                <li><a href="#">Carne</a></li>
+                                <li><a href="#">Pescados y mariscos</a></li>
+                                <li><a href="#">Atún</a></li>
+                                <li><a href="#">Pasta</a></li>
+                            </ul>
+                        </div>
+                        <div class="col menu-section">
+                            <span class="mega-menu-title">Por platillo</span>
+                            <ul class="mega-menu-list">
+                                <li><a href="#">Sopas</a></li>
+                                <li><a href="#">Ensaladas</a></li>
+                                <li><a href="#">Entradas</a></li>
+                                <li><a href="#">Guarniciones</a></li>
+                                <li><a href="#">Salsas y aderezos</a></li>
+                                <li><a href="#">Botanas</a></li>
+                                <li><a href="#">Postres</a></li>
+                                <li><a href="#">Bebidas y cocteles</a></li>
+                            </ul>
+                        </div>
+                        <div class="col menu-section">
+                            <span class="mega-menu-title">Especialidades</span>
+                            <ul class="mega-menu-list">
+                                <li><a href="#">Recetas mexicanas</a></li>
+                            </ul>
+                        </div>
+                        <div class="col menu-section">
+                            <span class="mega-menu-title">Imperdibles</span>
+                            <ul class="mega-menu-list">
+                                <li><a href="#">Recetarios</a></li>
+                                <li><a href="#">Clases de Cocina</a></li>
+                                <li><a href="#">Conoce a Cocina Vital</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-block d-lg-none">
+                    <div class="accordion" id="mobileMenuAccordion">
+
+                        <div class="CV-menu-acordeon-item accordion-item text-center">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button justify-content-center text-center" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Por momento del día
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#mobileMenuAccordion">
+                                <div class="accordion-body text-center">
+                                    <ul class="mega-menu-list">
+                                        <li><a href="#">Desayunos</a></li>
+                                        <li><a href="#">Comidas</a></li>
+                                        <li><a href="#">Cenas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="CV-menu-acordeon-item accordion-item text-center">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed justify-content-center" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Por ingrediente
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#mobileMenuAccordion">
+                                <div class="accordion-body text-center">
+                                    <ul class="mega-menu-list">
+                                        <li><a href="#">Pollo</a></li>
+                                        <li><a href="#">Carne</a></li>
+                                        <li><a href="#">Pescados y mariscos</a></li>
+                                        <li><a href="#">Atún</a></li>
+                                        <li><a href="#">Pasta</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="CV-menu-acordeon-item accordion-item text-center">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed justify-content-center" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Por platillo
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#mobileMenuAccordion">
+                                <div class="accordion-body text-center">
+                                    <ul class="mega-menu-list">
+                                        <li><a href="#">Sopas</a></li>
+                                        <li><a href="#">Ensaladas</a></li>
+                                        <li><a href="#">Entradas</a></li>
+                                        <li><a href="#">Guarniciones</a></li>
+                                        <li><a href="#">Salsas y aderezos</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="CV-menu-acordeon-item accordion-item text-center">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed justify-content-center" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    Especialidades
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#mobileMenuAccordion">
+                                <div class="accordion-body text-center">
+                                    <ul class="mega-menu-list">
+                                        <li><a href="#">Recetas mexicanas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="CV-menu-acordeon-item accordion-item text-center">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed justify-content-center" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    Imperdibles
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#mobileMenuAccordion">
+                                <div class="accordion-body text-center">
+                                    <ul class="mega-menu-list">
+                                        <li><a href="#">Recetarios</a></li>
+                                        <li><a href="#">Clases de Cocina</a></li>
+                                        <li><a href="#">Conoce a Cocina Vital</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header footer -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="social-icons text-center">
+                            <a href="https://www.facebook.com/cocinavital/" target="_blank" class="icon-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                    height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                </svg></a>
+                            <a href="https://x.com/Cocinavital" target="_blank" class="icon-twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                    class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/cocinavital/" target="_blank" class="icon-instagram"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                    height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg></a>
+                            <a href="https://mx.pinterest.com/CocinaVitalRevista/" target="_blank" class="icon-pinterest"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                    height="30" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0" />
+                                </svg></a>
+                            <a href="https://www.youtube.com/CocinavitalOficial" target="_blank" class="icon-youtube"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                    height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                                </svg></a>
+                            <a href="https://www.tiktok.com/@cocinavital" target="_blank" class="icon-tiktok"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                    height="30" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                                    <path
+                                        d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                                </svg></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="CV-menu-newsletter-section text-center py-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-envelope-paper" viewBox="0 0 16 16">
+                        <path
+                            d="M4 0a2 2 0 0 0-2 2v1.133l-.941.502A2 2 0 0 0 0 5.4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4a2 2 0 0 0-1.059-1.765L14 3.133V2a2 2 0 0 0-2-2zm10 4.267.47.25A1 1 0 0 1 15 5.4v.817l-1 .6zm-1 3.15-3.75 2.25L8 8.917l-1.25.75L3 7.417V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1zm-11-.6-1-.6V5.4a1 1 0 0 1 .53-.882L2 4.267zm13 .566v5.734l-4.778-2.867zm-.035 6.88A1 1 0 0 1 14 15H2a1 1 0 0 1-.965-.738L8 10.083zM1 13.116V7.383l4.778 2.867L1 13.117Z" />
+                    </svg>
+                    <span class="CV-menu-newsletter-section__title mb-3 mb-lg-0">Tus recetas favoritas<br>directo a tu
+                        correo</span>
+                    <p class="CV-menu-newsletter-info d-none d-lg-block mt-2">Disfruta cada semana de recetas y<br>
+                        recomendaciones cuidadosamente
+                        seleccionadas.</p>
+
+                    <form class="CV-menu-newsletter-form mx-auto">
+                        <input type="email" class="form-control CV-menu-newsletter-input"
+                            placeholder="Tu correo electrónico">
+                        <button class="btn CVbtn-suscribirme CV-menu-newsletter-button"
+                            type="button">¡SUSCRIBIRME!</button>
+                    </form>
+                </div>
+
+            </div>
+            <!-- <div class="CV-menu-newsletter-section text-center py-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-envelope-paper" viewBox="0 0 16 16">
+                    <path
+                        d="M4 0a2 2 0 0 0-2 2v1.133l-.941.502A2 2 0 0 0 0 5.4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4a2 2 0 0 0-1.059-1.765L14 3.133V2a2 2 0 0 0-2-2zm10 4.267.47.25A1 1 0 0 1 15 5.4v.817l-1 .6zm-1 3.15-3.75 2.25L8 8.917l-1.25.75L3 7.417V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1zm-11-.6-1-.6V5.4a1 1 0 0 1 .53-.882L2 4.267zm13 .566v5.734l-4.778-2.867zm-.035 6.88A1 1 0 0 1 14 15H2a1 1 0 0 1-.965-.738L8 10.083zM1 13.116V7.383l4.778 2.867L1 13.117Z" />
+                </svg>
+                <span class="CV-menu-newsletter-section__title">Tus recetas favoritas<br>directo a tu correo</span>
+                <p class="text-muted small mb-4">Disfruta cada semana de recetas y
+                    recomendaciones<br>cuidadosamente
+                    seleccionadas.</p>
+
+                <form class="CV-menu-newsletter-form mx-auto">
+                    <input type="email" class="form-control CV-menu-newsletter-input" placeholder="Tu correo electrónico">
+                    <button class="btn CVbtn-suscribirme CV-menu-newsletter-button" type="button">¡SUSCRIBIRME!</button>
+                </form>
+            </div> -->
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

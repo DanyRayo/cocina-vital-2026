@@ -1,0 +1,75 @@
+
+.CVfooter {
+    background: linear-gradient(2deg,rgb(255 237 147) 33%, rgba(255, 251, 219, 1) 73%);
+    color: var(--negro);
+}
+
+.CVfooter-brand {
+    padding-right: 1rem;
+}
+
+.CVfooter-brand__title {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 0.82;
+    text-transform: lowercase;
+}
+
+.CVfooter-brand__title span,
+.CVfooter-brand__title strong {
+    font-weight: 800;
+}
+
+.CVfooter-social a {
+    color: var(--negro);
+    text-decoration: none;
+}
+
+.CVfooter-sales,
+.CVfooter-copy,
+.CVfooter-legal a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--negro);
+    text-decoration: none;
+}
+
+.CVfooter-logos {
+    align-items: center;
+}
+
+.CVfooter-logo-slot {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CVfooter-logo-slot img {
+    /* Filtro blanco y negro */
+    filter: grayscale(100%);
+}
+
+.CVfooter-legal a:hover,
+.CVfooter-social a:hover {
+    opacity: 0.75;
+}
+
+@media (max-width: 991.98px) {
+    .CVfooter {
+        text-align: center;
+    }
+
+    .CVfooter-brand {
+        padding-right: 0;
+    }
+
+    .CVfooter-social {
+        justify-content: center;
+    }
+
+    .CVfooter-legal {
+        justify-content: center !important;
+    }
+}
