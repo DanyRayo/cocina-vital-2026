@@ -1,0 +1,32 @@
+.CVhistorico-hero {
+    background-image: url('../images/hero-historico.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px;
+}
+
+.CVhistorico-hero__info {
+    display: block;
+    position: relative;
+    border-radius: 25px;
+    border: 1px solid #FBFBFB;
+    background: rgba(255, 255, 255, 0.61);
+    backdrop-filter: blur(5.5px);
+    padding: 40px;
+    right: -50px;
+}
+
+.CVhistorico-hero__title {
+    font-family: var(--fauna);
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 1;
+}

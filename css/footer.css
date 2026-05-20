@@ -1,6 +1,5 @@
-
 .CVfooter {
-    background: linear-gradient(2deg,rgb(255 237 147) 33%, rgba(255, 251, 219, 1) 73%);
+    background: linear-gradient(2deg, rgb(255 237 147) 33%, rgba(255, 251, 219, 1) 73%);
     color: var(--negro);
 }
 
@@ -11,7 +10,8 @@
 .CVfooter-brand__title {
     display: inline-flex;
     flex-direction: column;
-    font-size: clamp(2rem, 3vw, 3rem);
+    /* font-size: clamp(2rem, 3vw, 3rem); */ /* Reemplazamos esta línea */
+    font-size: 2rem; /* Tamaño base para móviles */
     line-height: 0.82;
     text-transform: lowercase;
 }
@@ -46,9 +46,50 @@
     justify-content: center;
 }
 
+.footer-logo__mujer-de-10,
+.footer-logo__mujer-de-10 {
+    filter: grayscale(100%) contrast(140%) brightness(1%);
+}
+
+/* .footer-logo__soygrupero {
+    filter: grayscale(100%) contrast(140%) brightness(1%);
+    } */
+
+.footer-logo__laguiacentral {
+    filter: grayscale(100%) contrast(140%) brightness(1%);
+}
+
+.footer-logo__hb {
+    filter: grayscale(100%) contrast(200%) brightness(1%);
+}
+
+.footer-logo__iab {
+    filter: grayscale(100%) contrast(140%) brightness(1%);
+}
+
+.footer-logo__impulso-geek {
+    filter: grayscale(100%) contrast(140%) brightness(1%);
+}
+
+.footer-logo__motormania {
+    filter: grayscale(100%) contrast(140%) brightness(1%);
+}
+
+.footer-logo__cocina-vital{
+    filter: grayscale(100%) contrast(140%) brightness(1%);
+}
+
+/* 
 .CVfooter-logo-slot img {
-    /* Filtro blanco y negro */
-    filter: grayscale(100%);
+    filter: grayscale(100%) ;
+} */
+
+.footer-logo__gm{
+    margin: 0 auto;
+}
+
+.filtro-blanco-negro {
+    filter: grayscale(100%) contrast(140%) brightness(1%);
 }
 
 .CVfooter-legal a:hover,
@@ -56,20 +97,67 @@
     opacity: 0.75;
 }
 
-@media (max-width: 991.98px) {
+/* Estilos para móvil y tablet (hasta 991.98px) */
+.CVfooter {
+    text-align: center;
+}
+
+.CVfooter-brand {
+    padding-right: 0;
+}
+
+.CVfooter-social {
+    justify-content: center;
+}
+
+.CVfooter-legal {
+    justify-content: center !important;
+}
+
+
+/* Breakpoints de Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* Aquí revertimos o cambiamos los estilos para pantallas grandes */
     .CVfooter {
-        text-align: center;
+        text-align: left; /* O el alineado que necesites en desktop */
     }
 
     .CVfooter-brand {
-        padding-right: 0;
+        padding-right: 1rem; /* Restauramos el padding */
     }
 
     .CVfooter-social {
-        justify-content: center;
+        justify-content: flex-start; /* O el alineado que necesites */
     }
 
     .CVfooter-legal {
-        justify-content: center !important;
+        justify-content: flex-start !important; /* O el alineado que necesites */
     }
+
+    /* Añadimos el cambio de tamaño de fuente para el título */
+    .CVfooter-brand__title {
+        font-size: 3rem; /* Tamaño máximo para pantallas grandes */
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
 }
