@@ -1,16 +1,21 @@
 .CVnavbar {
+    height: 82px;
     border-bottom: 2px dashed var(--rojo-medio);
     backdrop-filter: blur(7px);
     background-color: rgb(245 245 245 / 70%);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1080;
 }
 
 .CVnavbar-canvas {
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
     background-color: rgb(245 245 245 / 70%);
+    top: 82px !important;
+    height: calc(100vh - 82px) !important;
+    border-top: none;
+    z-index: 1045 !important;
 }
 
 .CVnavbar-nav__link {
@@ -186,7 +191,17 @@
 /* Menu despegable CANVAS */
 .offcanvas-fullscreen {
     width: 100% !important;
-    height: 100vh !important;
+    height: calc(100vh - 82px) !important;
+    top: 82px !important;
+}
+
+.CVnavbar-canvas.offcanvas-top{
+    border-bottom: none;
+}
+
+.offcanvas-backdrop {
+    top: 82px !important;
+    height: calc(100vh - 82px) !important;
 }
 
 /* Estilos para el backdrop (fondo) */
@@ -218,10 +233,6 @@
     text-align: center;
     font-size: 20px;
     font-weight: 700;
-}
-
-.offcanvas-header {
-    border-bottom: var(--punteada);
 }
 
 .mega-menu-list {
@@ -489,38 +500,190 @@
 
 /* Efecto Fade In/Out para elementos del header */
 
-.CVnavbar-canvas .nav-menu__mobile,
-.CVnavbar-canvas .d-lg-block,
-.CVnavbar-canvas .d-lg-none,
-.CVnavbar-canvas .social-icons,
-.CVnavbar-canvas .moduloNewsletterHome {
-    opacity: 0;
-    transform: translateY(15px);
-    transition: opacity .4s ease-out, transform 0.3s ease-out;
+/* =========================================
+   Menu despegable CANVAS
+========================================= */
+
+.CVnavbar-canvas {
+    transition: transform .45s ease-in-out !important;
 }
 
-.CVnavbar-canvas.show .nav-menu__mobile,
-.CVnavbar-canvas.show .d-lg-block,
-.CVnavbar-canvas.show .d-lg-none,
-.CVnavbar-canvas.show .social-icons,
-.CVnavbar-canvas.show .moduloNewsletterHome {
+/* =========================================
+   ELEMENTOS ANIMADOS
+========================================= */
+
+.CVnavbar-canvas .menu-fade {
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+    will-change: opacity, transform;
+}
+
+/* ENTRADA */
+.CVnavbar-canvas.show .menu-fade {
     opacity: 1;
     transform: translateY(0);
+
+    transition:
+        opacity .12s ease-out,
+        transform .12s ease-out;
 }
 
-.CVnavbar-canvas.show .nav-menu__mobile {
-    transition-delay: .2s;
+/* SALIDA */
+.CVnavbar-canvas.closing .menu-fade {
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition:
+        opacity .10s ease-in,
+        transform .10s ease-in;
 }
-.CVnavbar-canvas.show .d-lg-block,
-.CVnavbar-canvas.show .d-lg-none {
-    transition-delay: .2s;
+
+/* DELAYS */
+.CVnavbar-canvas.show .fade-1 { transition-delay: .03s; }
+.CVnavbar-canvas.show .fade-2 { transition-delay: .06s; }
+.CVnavbar-canvas.show .fade-3 { transition-delay: .09s; }
+.CVnavbar-canvas.show .fade-4 { transition-delay: .12s; }
+.CVnavbar-canvas.show .fade-5 { transition-delay: .15s; }
+
+/* =========================================
+   DELAYS DE SALIDA 
+========================================= */
+
+.CVnavbar-canvas.closing .fade-1 {
+    transition-delay: .08s;
 }
-.CVnavbar-canvas.show .social-icons {
-    transition-delay: .1s;
+
+.CVnavbar-canvas.closing .fade-2 {
+    transition-delay: .06s;
 }
-.CVnavbar-canvas.show .moduloNewsletterHome {
-    transition-delay: .1s;
+
+.CVnavbar-canvas.closing .fade-3 {
+    transition-delay: .04s;
 }
+
+.CVnavbar-canvas.closing .fade-4 {
+    transition-delay: .02s;
+}
+
+.CVnavbar-canvas.closing .fade-5 {
+    transition-delay: 0s;
+}
+
+
+/* =========================================
+   Buscador CANVAS
+========================================= */
+
+.CVsearch-canvas {
+    transition: transform .35s ease-in-out !important;
+}
+
+/* =========================================
+   ELEMENTOS ANIMADOS
+========================================= */
+
+.CVsearch-canvas .search-fade {
+    opacity: 0;
+    transform: translateY(8px) scale(.98);
+
+    transition:
+        opacity .18s ease,
+        transform .18s ease;
+
+    will-change: opacity, transform;
+}
+
+/* ENTRADA */
+
+.CVsearch-canvas.show .search-fade {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+
+    transition:
+        opacity .12s ease-out,
+        transform .12s ease-out;
+}
+
+/* SALIDA */
+
+.CVsearch-canvas.closing .search-fade {
+    opacity: 0;
+    transform: translateY(8px) scale(.98);
+
+    transition:
+        opacity .14s ease-in,
+        transform .14s ease-in;
+}
+
+/* =========================================
+   DELAYS ENTRADA
+========================================= */
+
+.CVsearch-canvas.show .fade-1 {
+    transition-delay: .03s;
+}
+
+.CVsearch-canvas.show .fade-2 {
+    transition-delay: .06s;
+}
+
+.CVsearch-canvas.show .fade-3 {
+    transition-delay: .09s;
+}
+
+/* =========================================
+   DELAYS SALIDA
+========================================= */
+
+.CVsearch-canvas.closing .fade-1 {
+    transition-delay: .04s;
+}
+
+.CVsearch-canvas.closing .fade-2 {
+    transition-delay: .02s;
+}
+
+.CVsearch-canvas.closing .fade-3 {
+    transition-delay: 0s;
+}
+
+/* Animación en x */
+.CVbtn-menu-circle{
+    position: relative;
+    overflow: hidden;
+}
+
+.CVbtn-menu-circle span{
+    transition:
+        transform .25s ease,
+        opacity .25s ease,
+        top .25s ease;
+
+    position: relative;
+}
+
+/* MENU ABIERTO */
+
+.CVbtn-menu-circle.is-open span:nth-child(1){
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.CVbtn-menu-circle.is-open span:nth-child(2){
+    opacity: 0;
+}
+
+.CVbtn-menu-circle.is-open span:nth-child(3){
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+
+
 
 /* Bootstrap 5 breakpoints */
 @media (min-width: 576px) {
