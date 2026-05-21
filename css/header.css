@@ -13,7 +13,7 @@
     backdrop-filter: blur(7px);
     background-color: rgb(245 245 245 / 70%);
     top: 82px !important;
-    height: calc(100vh - 82px) !important;
+    height: calc(100dvh - 82px) !important;
     border-top: none;
     z-index: 1045 !important;
 }
@@ -191,7 +191,7 @@
 /* Menu despegable CANVAS */
 .offcanvas-fullscreen {
     width: 100% !important;
-    height: calc(100vh - 82px) !important;
+    height: calc(100dvh - 82px) !important;
     top: 82px !important;
 }
 
@@ -201,7 +201,7 @@
 
 .offcanvas-backdrop {
     top: 82px !important;
-    height: calc(100vh - 82px) !important;
+    height: calc(100dvh - 82px) !important;
 }
 
 /* Estilos para el backdrop (fondo) */

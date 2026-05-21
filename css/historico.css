@@ -30,3 +30,15 @@
     font-weight: 100;
     line-height: 1;
 }
+
+.CVhistorico-top5__slide {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.CVhistorico-top5-slide__item{
+    display: block;
+    max-width: 200px;
+}

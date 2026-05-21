@@ -27,26 +27,25 @@
             </a>
             <nav class="d-none d-lg-flex flex-grow-1 justify-content-center gap-3"
                 aria-label="Menú de navegación principal">
-                <a href="#" class="CVnavbar-nav__link">
+                <a href="#" class="CVnavbar-nav__link categoriasHeader2026Nuevas-a-gtm">
                     <img src="./images/icono-recetas.webp" alt="Icono recetas"> Recetas nuevas</a>
-                <a href="#" class="CVnavbar-nav__link">
+                <a href="#" class="CVnavbar-nav__link categoriasHeader2026Tips-a-gtm">
                     <img src="./images/icono-tips.webp" alt="Icono tips"> Tips de cocina</a>
-                <a href="#" class="CVnavbar-nav__link">
+                <a href="#" class="CVnavbar-nav__link categoriasHeader2026Recetarios-a-gtm">
                     <img src="./images/icono-recetarios.webp" alt="Icono recetarios"> Recetarios</a>
-                <a href="#" class="CVnavbar-nav__link">
+                <a href="#" class="CVnavbar-nav__link categoriasHeader2026Videorecetas-a-gtm">
                     <img src="./images/icono-videos.webp" alt="Icono videorecetas"> Videorecetas</a>
             </nav>
             <div class="d-flex align-items-center gap-md-5 gap-sm-3">
-                <button class="CVbtn-search-trigger buscador2026-form-gtm" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#CVsearchOffcanvas" aria-controls="CVsearchOffcanvas" aria-label="Abrir buscador">
+                <button class="CVbtn-search-trigger buscador2026-form-gtm" type="button"
+                    aria-controls="CVsearchOffcanvas" aria-label="Abrir buscador">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-search search-icon" viewBox="0 0 16 16" aria-hidden="true">
                         <path
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
                 </button>
-                <button class="CVbtn-menu-circle" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
+                <button id="menuToggleBtn" class="CVbtn-menu-circle" type="button" aria-controls="megaMenuOffcanvas">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,17 +56,6 @@
     <!-- Buscador -->
     <div class="CVsearch-canvas offcanvas offcanvas-top offcanvas-fullscreen" tabindex="-1" id="CVsearchOffcanvas"
         aria-labelledby="CVsearchLabel">
-        <div class="CVsearch-header px-3 px-lg-4 py-3">
-            <span class="CVsearch-header__label" id="CVsearchLabel"></span>
-            <button type="button" class="CVsearch-close" aria-label="Cerrar buscador">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x-lg"
-                    viewBox="0 0 16 16" aria-hidden="true">
-                    <path
-                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                </svg>
-            </button>
-        </div>
-
         <div class="offcanvas-body CVsearch-body">
             <form class="CVsearch-form search-fade fade-1" role="search" autocomplete="on">
                 <label class="visually-hidden" for="CVsearchInput">Buscar recetas o contenido</label>
@@ -96,50 +84,24 @@
     <div class="CVnavbar-canvas offcanvas offcanvas-top offcanvas-fullscreen" tabindex="-1" id="megaMenuOffcanvas"
         aria-labelledby="megaMenuLabel">
 
-        <div class="offcanvas-header px-4 py-3">
-            <a class="navbar-brand" href="#" aria-label="Cocina Vital">
-                <div class="CVnavbar-logo d-flex align-items-center">
-                    <img src="./images/cocina-vital-logo-200.webp" srcset=",,"
-                        sizes="(max-width: 991.98px) 150px, 200px" alt="Cocina Vital" width="200" height="20"
-                        ./images/cocina-vital-logo-150.webp 150w ./images/cocina-vital-logo-200.webp 200w
-                        ./images/cocina-vital-logo-400.webp 400w class="CVnavbar-logo__img img-fluid">
-                </div>
-            </a>
-            <nav class="d-none d-lg-flex flex-grow-1 justify-content-center gap-5"
-                aria-label="Menú de navegación principal">
-                <a href="#" class="CVnavbar-nav__link categoriasHeader2026Nuevas-a-gtm">
-                    <img src="./images/icono-recetas.webp" alt="Icono recetas"> Recetas nuevas</a>
-                <a href="#" class="CVnavbar-nav__link categoriasHeader2026Tips-a-gtm">
-                    <img src="./images/icono-tips.webp" alt="Icono tips"> Tips de cocina</a>
-                <a href="#" class="CVnavbar-nav__link categoriasHeader2026Recetarios-a-gtm">
-                    <img src="./images/icono-recetarios.webp" alt="Icono recetarios"> Recetarios</a>
-                <a href="#" class="CVnavbar-nav__link categoriasHeader2026Videorecetas-a-gtm">
-                    <img src="./images/icono-videos.webp" alt="Icono videorecetas"> Videorecetas</a>
-            </nav>
-
-            <button type="button" class="btn-close CVnavbar-cerrar" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-lg"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                </svg>
-            </button>
-        </div>
-
         <div class="offcanvas-body p-0 d-flex flex-column">
             <div class="container-fluid flex-grow-1">
                 <nav class="nav-menu__mobile d-block d-lg-none menu-fade fade-1">
                     <div class="row text-center py-4">
-                        <div class="col-6 mb-3 text-start"><a href="#" class="CVnavbar-nav__link"><img
+                        <div class="col-6 mb-3 text-start"><a href="#"
+                                class="CVnavbar-nav__link categoriasHeader2026Nuevas-a-gtm"><img
                                     src="./images/icono-recetas.webp" alt="Icono recetas"> Recetas
                                 nuevas</a></div>
-                        <div class="col-6 mb-3 text-start"><a href="#" class="CVnavbar-nav__link"><img
+                        <div class="col-6 mb-3 text-start"><a href="#"
+                                class="CVnavbar-nav__link categoriasHeader2026Tips-a-gtm"><img
                                     src="./images/icono-tips.webp" alt="Icono tips"> Tips de cocina</a>
                         </div>
-                        <div class="col-6 text-start"><a href="#" class="CVnavbar-nav__link"><img
+                        <div class="col-6 text-start"><a href="#"
+                                class="CVnavbar-nav__link categoriasHeader2026Recetarios-a-gtm"><img
                                     src="./images/icono-recetarios.webp" alt="Icono recetarios">
                                 Recetarios</a></div>
-                        <div class="col-6 text-start"><a href="#" class="CVnavbar-nav__link"><img
+                        <div class="col-6 text-start"><a href="#"
+                                class="CVnavbar-nav__link categoriasHeader2026Videorecetas-a-gtm"><img
                                     src="./images/icono-videos.webp" alt="Icono videorecetas">
                                 Videorecetas</a></div>
                     </div>
@@ -2516,6 +2478,7 @@
 
                     </div>
                     <!-- infomoduloNewsletterHome -->
+                    <!-- infomoduloNewsletterHome -->
                 </section>
                 <!--Seccion Newsletter home-->
             </div>
@@ -2528,40 +2491,57 @@
     <div class="container">
         <div class="skin-container">
             <section class="CVhistorico-hero">
-        <div class="CVhistorico-hero__info">
-            <h1 class="CVhistorico-hero__title">Recetas<br>nuevas</h1>
+                <div class="CVhistorico-hero__info">
+                    <h1 class="CVhistorico-hero__title">Recetas<br>nuevas</h1>
+                </div>
+            </section>
+            <!-- Inicio banner-->
+            <div class="AllBanners banner-desk">
+                <!--publicidad-->
+                <span class="txtPublicidadVideoteca">Cocina Vital se financia mediante anuncios y socios</span>
+                <div class="leader">
+                    <img src="images/leader.png">
+                </div>
+            </div>
+            <!--publicidad-->
+            <div class="AllBanners banner-mob">
+                <!--publicidad-->
+                <span class="txtPublicidadVideoteca">Cocina Vital se financia mediante anuncios y socios</span>
+                <div class="leader">
+                    <img src="images/leader.png">
+                </div>
+            </div>
+            <!--publicidad-->
+            <!-- Fin banner-->
+            <!-- Inicio top 5 nuevas recetas-->
+            <section class="CVhistorico-top5">
+                <div class="container">
+                    <h2 class="CVhistorico-top5__title">Top 5 de nuevas recetas</h2>
+                    <div class="CVhistorico-top5__slide">
+                        <article class="CVhistorico-top5-slide__item">
+                            <div class="CVhistorico-top5-slide-item__head">
+                                <img src="images/historico-slide-img-1.jpg" class="CVhistorico-top5-slide__img" alt="Receta 1">
+                                <div class="CVhistorico-top5-slide-item__tag">Súper fácil</div>
+                            </div>
+                            <div class="CVhistorico-top5-slide-item__puntuacion">
+                                <span class="CVhistorico-top5-slide-item__puntuacion-text">⭐⭐⭐⭐☆</span>
+                                <div class="CV-icono__play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-play-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <span class="CVhistorico-top5-slide__title">Receta de ensalada de atún mexicana ¡con solo 6
+                                ingredientes!</span>
+                        </article>
+                    </div>
+            </section>
+            <!-- Fin top 5 nuevas recetas-->
         </div>
-    </section>
+    </div>
     <!-- Fin historico -->
-    <!-- Inicio banner-->
-    <div class="AllBanners banner-desk">
-        <!--publicidad-->
-        <span class="txtPublicidadVideoteca">Cocina Vital se financia mediante anuncios y socios</span>
-        <div class="leader">
-            <img src="images/leader.png">
-        </div>
-    </div>
-    <!--publicidad-->
-    <div class="AllBanners banner-mob">
-        <!--publicidad-->
-        <span class="txtPublicidadVideoteca">Cocina Vital se financia mediante anuncios y socios</span>
-        <div class="leader">
-            <img src="images/leader.png">
-        </div>
-    </div>
-    <!--publicidad-->
-    <!-- Fin banner-->
-    <!-- Inicio top 5 nuevas recetas-->
-    <section class="CVhistorico-top5">
-        <div class="container">
-            <h2 class="CVhistorico-top5__title">Top 5 de nuevas recetas</h2>
-        </div>
-
-
-    </section>
-    <!-- Fin top 5 nuevas recetas-->
-        </div>
-    </div>
     <!-- Inicio Footer -->
     <footer class="CVfooter py-5">
         <div class="container">
